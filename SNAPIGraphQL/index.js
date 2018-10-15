@@ -10,7 +10,7 @@ const BASE_URL = "https://snapistage.acosta.com/api";
 const AUTH_HEADER = "Basic " + new Buffer(process.env["username"] + ":" + process.env["userpass"]).toString("base64");
 const HEADERS = {headers:{"Authorization":AUTH_HEADER,"ContentType":"application/json"}};
 
-console.log(`${AUTH_HEADER} :: ${process.env["username"]} :: ${process.env["userpass"]}`);
+
 
 const platforms = fetch(`${BASE_URL}/platforms/getall`, HEADERS).then(res => res.json());
 
